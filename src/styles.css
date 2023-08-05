@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(41, 40, 40)!important;
+    color: aliceblue;
+}
+a{
+    text-decoration: none indianred!important;
+    color: aliceblue;
+    font-size: 30px;
+}

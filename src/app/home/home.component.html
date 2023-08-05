@@ -1,0 +1,21 @@
+
+<app-header [movies]="movies"></app-header>
+<div class="container">
+    <div class="row">
+
+        <div  *ngFor="let movie of movies" class="col-lg-3 col-md-8 col-sm-11 p-2 position-relative">
+              <a [routerLink]='["/details",movie.id]'>
+
+                  <div >
+                      <img [src]="img+movie.poster_path" class="w-100" alt="">
+                      
+                  </div>
+                  <h4 class="text-center h5">{{movie.title}}</h4>
+                  <div class="vote position-absolute end-0 top-0">
+                {{movie.vote_average}}
+                  </div>
+
+              </a>
+        </div>
+    </div>
+</div>

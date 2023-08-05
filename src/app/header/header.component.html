@@ -1,0 +1,27 @@
+<!-- 
+
+<owl-carousel-o [options]="customOptions" *ngFor="let movie of movies">
+    
+    <ng-container >
+     
+      <ng-template carouselmovie [id]="movie.id">
+        <img [src]="img+movie.poster_path"  alt="takwa">
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o> -->
+  <!-- <owl-carousel-o *ngFor="let movie of movies" [options]="customOptions">
+    <ng-template carouselmovie [id]="movie.id" carouselSlide>
+        <img [src]="img+movie.poster_path" class="w-25"  alt="takwa">
+        <img [src]="img+movie.poster_path" class="w-25"  alt="takwa">
+    </ng-template>  
+    
+  </owl-carousel-o>
+ -->
+ <owl-carousel-o [options]="customOptions">
+    <ng-template *ngFor="let movie of movies" carouselSlide>
+        <img [src]="img+movie.poster_path" class="w-100 p-1 "  alt="takwa">
+    </ng-template>  
+     
+    
+  </owl-carousel-o>

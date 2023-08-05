@@ -1,0 +1,13 @@
+<nav class="p-3 d-flex align-items-center justify-content-between">
+    <ul  class="list-unstyled d-flex ">
+        <li *ngIf="islogin" class="px-2"><a routerLink="home">Home</a></li>
+        <li *ngIf="islogin" class="px-2"><a routerLink="about">About</a></li>
+        <li *ngIf="islogin" class="px-2"><a routerLink="content">contact</a></li>
+    </ul>
+
+    <ul class="list-unstyled d-flex ">
+        <li *ngIf="!islogin" class="px-2"><a routerLink="login">login</a></li>
+        <li  *ngIf="!islogin"class="px-2"><a routerLink="sign">signup</a></li>
+        <li (click)='logout()' *ngIf="islogin" class="px-2"><a routerLink="sign">logout</a></li>
+    </ul>
+</nav>
